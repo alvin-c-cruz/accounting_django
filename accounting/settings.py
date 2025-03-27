@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home_page',
+    'accounts'
 ]
 
 MIDDLEWARE = [
@@ -124,9 +125,27 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+# Email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.mail.yahoo.com' 
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'alvin_c_cruz@yahoo.com'
 EMAIL_HOST_PASSWORD = 'cpwozqheapmaqncn'
+
+
+# Custom account
+AUTH_USER_MODEL = 'accounts.CustomUser'
+
+
+# Redirect after login/logout
+LOGIN_REDIRECT_URL = 'profile'
+LOGOUT_REDIRECT_URL = 'login'
+
+# Directory where static files are collected
+STATIC_ROOT = BASE_DIR /'staticfiles'
+
+# Additional locations of static files
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
