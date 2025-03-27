@@ -3,15 +3,85 @@
 {% block title %}Register{% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col-md-6">
-            <h2 class="text-center"><i class="fas fa-user-plus"></i> Register</h2>
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="btn btn-success w-100"><i class="fas fa-user-plus"></i> Register</button>
-            </form>
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-lg border-0 rounded-3">
+                <div class="card-body p-4">
+                    <h3 class="text-center mb-4">
+                        <i class="fas fa-user-plus"></i> Register
+                    </h3>
+                    <form method="post" novalidate>
+                        {% csrf_token %}
+
+
+                        <div class="mb-3">
+                            <label for="id_username" class="form-label">Username</label>
+                            <input type="text" name="username" class="form-control" maxlength="150" autofocus required aria-describedby="id_username_helptext" id="id_username" autocomplete="off">
+                            <small class="form-text text-muted">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</small>
+                        </div>
+                        
+                        
+                        <div class="mb-3">
+                            <label for="id_email" class="form-label">Email address</label>
+                            <input type="email" name="email" maxlength="254" id="id_email" class="form-control" autocomplete="off">
+                            
+                            
+                        </div>
+                        
+                        
+                        <div class="mb-3">
+                            <label for="id_first_name" class="form-label">First name</label>
+                            <input type="text" name="first_name" maxlength="150" id="id_first_name" class="form-control" autocomplete="off">
+                            
+                            
+                        </div>
+                        
+                        
+                        <div class="mb-3">
+                            <label for="id_middle_name" class="form-label">Middle name</label>
+                            <input type="text" name="middle_name" maxlength="50" id="id_middle_name" class="form-control" autocomplete="off">
+                            
+                            
+                        </div>
+                        
+                        
+                        <div class="mb-3">
+                            <label for="id_last_name" class="form-label">Last name</label>
+                            <input type="text" name="last_name" maxlength="150" id="id_last_name" class="form-control" autocomplete="off">
+                            
+                            
+                        </div>
+                        
+                        
+                        <div class="mb-3">
+                            <label for="id_password1" class="form-label">Password</label>
+                            <input type="password" name="password1" class="form-control" autocomplete="new-password" required aria-describedby="id_password1_helptext" id="id_password1" autocomplete="off">
+                            
+                                <small class="form-text text-muted"><ul><li>Your password can’t be too similar to your other personal information.</li><li>Your password must contain at least 8 characters.</li><li>Your password can’t be a commonly used password.</li><li>Your password can’t be entirely numeric.</li></ul></small>
+                            
+                            
+                        </div>
+                        
+                        
+                        <div class="mb-3">
+                            <label for="id_password2" class="form-label">Password confirmation</label>
+                            <input type="password" name="password2" class="form-control" autocomplete="new-password" required aria-describedby="id_password2_helptext" id="id_password2" autocomplete="off">
+                            
+                                <small class="form-text text-muted">Enter the same password as before, for verification.</small>
+                            
+                            
+                        </div>
+                        
+                        <button type="submit" class="btn btn-success w-100">
+                            <i class="fas fa-user-plus"></i> Register
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <p class="text-center mt-3">
+                © 2025 Alvin C. Cruz | All Rights Reserved.
+            </p>
         </div>
     </div>
 </div>
