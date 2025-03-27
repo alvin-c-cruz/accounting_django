@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 col-md-12">
+            <!-- About Me Card -->
+            <div class="card shadow-lg border-0">
+                <div class="card-body p-5">
+                    <h1 class="text-center mb-4">About Me</h1>
+                    <p class="lead text-muted text-center">
+                        Hello, I'm <strong>Alvin C. Cruz</strong>, CPA with a passion for combining accounting expertise with technology.
+                        I have dedicated my career to streamlining financial processes and enhancing business operations through innovative solutions.
+                    </p>
+
+                    <hr class="my-4">
+
+                    <!-- My Background Section -->
+                    <h2 class="mt-4"><i class="fas fa-user-graduate"></i> My Background</h2>
+                    <p>
+                        I hold a degree in Accountancy and passed the Philippine CPA Board Examinations. Over the years, I have gained extensive experience in managing financial records, analyzing business data, and ensuring compliance with industry regulations.
+                    </p>
+
+                    <!-- Journey into Programming Section -->
+                    <h2 class="mt-4"><i class="fas fa-laptop-code"></i> My Journey into Programming</h2>
+                    <p>
+                        Beyond accounting, I developed a strong interest in programming and self-taught Python to expand my skill set. I specialize in using Python for:
+                    </p>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item"><i class="fas fa-chart-bar text-primary"></i> Developing accounting and bookkeeping systems</li>
+                        <li class="list-group-item"><i class="fas fa-globe text-success"></i> Building web applications using Flask and Django</li>
+                        <li class="list-group-item"><i class="fas fa-file-alt text-warning"></i> Automating financial reports and data processing</li>
+                        <li class="list-group-item"><i class="fas fa-boxes text-info"></i> Enhancing inventory management through customized applications</li>
+                    </ul>
+
+                    <!-- Professional Experience Section -->
+                    <h2 class="mt-4"><i class="fas fa-briefcase"></i> Professional Experience</h2>
+                    <p>
+                        Currently, I am working at a manufacturing company where I manage the accounting department while developing a
+                        <strong>computerized accounting system</strong> to improve operational efficiency.
+                        I am also involved in creating custom web applications that help automate and simplify business processes.
+                    </p>
+
+                    <!-- Skills and Expertise Section -->
+                    <h2 class="mt-4"><i class="fas fa-tools"></i> Skills and Expertise</h2>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item"><i class="fas fa-calculator text-primary"></i> Accounting and Financial Reporting</li>
+                        <li class="list-group-item"><i class="fas fa-file-invoice-dollar text-success"></i> Taxation and Compliance</li>
+                        <li class="list-group-item"><i class="fas fa-code text-warning"></i> Web Application Development (Flask & Django)</li>
+                        <li class="list-group-item"><i class="fas fa-database text-info"></i> Database Management (SQLAlchemy & Django ORM)</li>
+                        <li class="list-group-item"><i class="fas fa-chart-line text-danger"></i> Data Analysis and Automation (Pandas & OpenPyXL)</li>
+                    </ul>
+
+                    <!-- My Mission Section -->
+                    <h2 class="mt-4"><i class="fas fa-bullseye"></i> My Mission</h2>
+                    <p>
+                        My mission is to bridge the gap between accounting and technology by developing user-friendly systems
+                        that simplify financial tasks for businesses. I believe that leveraging technology can greatly enhance
+                        efficiency and accuracy in any organization.
+                    </p>
+
+                    <!-- Get in Touch Section -->
+                    <h2 class="mt-4"><i class="fas fa-envelope"></i> Get in Touch</h2>
+                    <p>
+                        If you're interested in collaborating or learning more about my work, feel free to
+                        <a href="{% url 'contact' %}" class="btn btn-primary btn-sm">
+                            <i class="fas fa-paper-plane"></i> Contact Me
+                        </a>. I’d love to discuss how I can help improve your business processes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
